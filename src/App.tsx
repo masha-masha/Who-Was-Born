@@ -1,12 +1,12 @@
-
 import './App.css'
+import CategorySelect from './components/CategorySelect/CategorySelect'
 
 function App() {
 
 
   return (
     <>
-     <h1>Привет</h1>
+     <CategorySelect/>
     </>
   )
 }
