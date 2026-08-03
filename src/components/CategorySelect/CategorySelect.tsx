@@ -1,4 +1,5 @@
-import "./CategorySelect.css"
+import "./CategorySelect.css";
+import { Link } from 'react-router-dom';
 import { peopleData } from "../../data/people";
 import type { Person } from "../../types";
 import { useState } from "react";
@@ -17,12 +18,16 @@ const [people, setPeople] = useState<Person[] | []>([]);
 
   return (
     <div>
-      <button className="btn" onClick={() => setPeople(peopleData.filter((el) => getDate() === el.born))}>Кто родился в этот день?</button>
-      
-      <ul>
-        {people.map((el) => <li>{el.name}</li>
-        )}
-      </ul>
+      <button className="btn" onClick={() => setPeople(peopleData.filter((el) => getDate() === el.born))}>Кто родился в этот день?</button>  
+     <ul className="category">
+          {people.map((person) => (
+            <li key={person.id}>
+              <Link to={`/persons/${person.slug}`} className="category">
+                <span className="contents-list__label">{person.name}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
     </div>
   )
 }

@@ -5,6 +5,7 @@ export const peopleData: Person[] = [
   {
     id: 1,
     name: 'Некрашевич Илья Георгиевич',
+    slug: "Nekrashevich-Ilya-Georgievich",
     born: "02.08",
     died: "18.11",
     dates: "02.08.1905 - 18.11.1993",
@@ -18,6 +19,7 @@ export const peopleData: Person[] = [
    {
     id: 2,
     name: 'Алесь Адамович',
+    slug: "Ales-Adamovich",
     born: "03.08",
     died: "26.01",
     dates: "02.08.1905 - 18.11.1993",
