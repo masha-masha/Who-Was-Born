@@ -17,6 +17,7 @@ const [people, setPeople] = useState<Person[] | []>([]);
   return (
     <div>
       <button onClick={() => setPeople(peopleData.filter((el) => getDate() === el.born))}>Кто родился в этот день?</button>
+      
       <ul>
         {people.map((el) => <li>{el.name}</li>
         )}
