@@ -8,6 +8,7 @@ export const peopleData: Person[] = [
     slug: "Nekrashevich-Ilya-Georgievich",
     born: "02.08",
     died: "18.11",
+    city: "Минск",
     dates: "02.08.1905 - 18.11.1993",
     shortDesc: 'Беларуский физик, заслуженный деятель науки БССР, профессор БГУ',
     funFacts: [
@@ -20,6 +21,7 @@ export const peopleData: Person[] = [
     id: 2,
     name: 'Алесь Адамович',
     slug: "Ales-Adamovich",
+    city: "Минск",
     born: "03.08",
     died: "26.01",
     dates: "02.08.1905 - 18.11.1993",
@@ -29,5 +31,19 @@ export const peopleData: Person[] = [
       
     ],
     wikiUrl: 'https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%BA%D1%80%D0%B0%D1%88%D0%B5%D0%B2%D0%B8%D1%87%2C_%D0%98%D0%BB%D1%8C%D1%8F_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D1%8C%D0%B5%D0%B2%D0%B8%D1%87'
+  },
+  {
+    id: 3,
+    name: 'Ольгред Обухович',
+    slug: "Olgred-Obuhovich",
+    born: "06.08",
+    died: "10.08",
+    city: "Минск",
+    dates: "06.08.1840 - 10.08.1898",
+    shortDesc: 'Беларуский писатель, переводчик',
+    funFacts: [
+      "Участвовал в восстании 1863—1864 гг., был сослан в Сибирь. По возвращении хотел раздать свою землю крестьянам, но из-за сопротивления семьи покинул имение и поселился в Слуцке, где занялся репетиторством и литературой."
+    ],
+    wikiUrl: 'https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%87,_%D0%9E%D0%BB%D1%8C%D0%B3%D0%B5%D1%80%D0%B4'
   },
 ];

@@ -1,0 +1,259 @@
+.person-page {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+  background-color: var(--bg-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.person-page__glow {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(186, 230, 253, 0.35) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.person-page__container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px; 
+  margin: 0 auto;
+}
+
+.person-page__back {
+  font-family: var(--font-main);
+  background: transparent;
+  border: none;
+  color: var(--accent-blue);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 0;
+  display: inline-flex;
+  transition: transform 0.2s ease;
+}
+
+.person-page__back:hover {
+  transform: translateX(-4px);
+}
+
+.person-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 28px;
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.01),
+    0 20px 40px -15px rgba(2, 132, 199, 0.06);
+  display: grid;
+  grid-template-columns: 240px 1fr; 
+  gap: clamp(24px, 5vw, 48px);
+}
+
+.person-card__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.person-card__image-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4; 
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-color);
+}
+
+.person-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.person-card__image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-light) 0%, #bae6fd 100%);
+  color: var(--accent-blue);
+  font-family: var(--font-main);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+
+.person-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-item__label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.meta-item__value {
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.person-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.person-card__name {
+  font-family: var(--font-main);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.person-card__desc {
+  font-family: var(--font-main);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+}
+
+.person-card__divider {
+  width: 100%;
+  height: 1px;
+  background-color: #f1f5f9;
+  margin-bottom: 24px;
+}
+
+
+.facts-block {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.facts-block__title {
+  font-family: var(--font-main);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.facts-block__list {
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.facts-block__item {
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+
+.person-card__wiki-btn {
+  font-family: var(--font-main);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--accent-light);
+  color: var(--accent-blue);
+  border: 1px solid #bae6fd;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.person-card__wiki-btn:hover {
+  background-color: #bae6fd;
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 768px) {
+  .person-card {
+    grid-template-columns: 1fr; 
+    gap: 32px;
+    border-radius: 20px;
+    padding: 24px 20px;
+  }
+
+  .person-card__aside {
+    flex-direction: row; 
+    align-items: center;
+    gap: 20px;
+  }
+
+  .person-card__image-wrapper {
+    width: 120px; 
+    height: 160px;
+  }
+
+  .person-card__meta {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .person-card__wiki-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .person-card__aside {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  .person-card__image-wrapper {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 3 / 4;
+  }
+}
