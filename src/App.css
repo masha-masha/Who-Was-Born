@@ -1,14 +1,16 @@
 :root {
-  --bg-color: #f9f7f2;
-  --card-bg: transparent;
-  --accent-color: #891d1d; 
-  --text-primary: #333;
-  --text-secondary: #5c1616;
-  --shadow-color: rgba(137, 29, 29, 0.08);
-  --border-color: rgba(137, 29, 29, 0.1);
-  --btn-bg: #891d1d;
-  --btn-bg-hover: #891d1d;
-  --btn-text: #f9f7f2;
+ 
+  --bg-color: #f1f5f9;         
+  --card-bg: #ffffff;          
+  --accent-light: #e0f2fe;      
+  --accent-blue: #0284c7;      
+  --text-primary: #0f172a;      
+  --text-muted: #334155;        
+  --border-subtle: #cbd5e1; 
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
 }
 
 [data-theme='dark'] {
