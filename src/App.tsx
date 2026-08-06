@@ -1,7 +1,7 @@
 import "./App.css";
 import CategorySelect from "./components/CategorySelect/CategorySelect";
 import Header from "./components/Header/Header";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PersonDetail from "./components/PersonDetail/PersonDetail";
 
 function App() {
